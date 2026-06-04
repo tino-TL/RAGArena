@@ -32,6 +32,42 @@ RAGArena is a local-first Agentic RAG system for long PDFs such as research pape
 
 ![RAGArena system architecture](docs/images/ragarena-system-architecture.png)
 
+RAGArena is split into an offline knowledge-processing path and an online Agentic RAG path.
+
+Offline processing turns raw PDFs into searchable evidence:
+
+```text
+arXiv / uploaded PDFs / enterprise documents
+ -> fetch metadata and download PDFs
+ -> parse PDFs with Docling / PyMuPDF
+ -> store structured paper_blocks
+ -> plan agentic chunks with qwen3.5:4b
+ -> build body / visual / fused chunks
+ -> validate boundaries and link visual evidence
+ -> embed chunks with Qwen3-Embedding-4B
+ -> store metadata in PostgreSQL and search indexes in Elasticsearch
+```
+
+Online retrieval answers user queries through FastAPI and LangGraph:
+
+```text
+Client / CLI / HTTP
+ -> FastAPI endpoints
+ -> LangGraph guardrail and router
+ -> direct answer OR local RAG
+ -> optional HyDE
+ -> Qwen3-Embedding-4B query embedding
+ -> Elasticsearch BM25 + vector search
+ -> RRF fusion
+ -> BGE-Reranker
+ -> top-k context chunks
+ -> qwen3.5:4b document grading
+ -> generate answer OR rewrite query OR give up
+ -> answer with sources / optional SSE stream
+```
+
+PostgreSQL stores papers, files, parsed blocks, chunks, and embeddings. Elasticsearch serves BM25 and vector retrieval. Redis is used for QA/runtime cache and feedback buffering. Langfuse traces, trace summaries, retrieval metadata, rerank status, and pytest regression tests provide observability and evaluation support.
+
 ### Agent Workflow
 
 ![RAGArena LangGraph workflow](docs/images/ragarena-agent-workflow.png)
