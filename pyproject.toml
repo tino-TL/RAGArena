@@ -1,0 +1,91 @@
+[project]
+name = "ragarena"
+version = "0.1.0"
+description = "Agentic RAG system for AI research papers with ingestion, retrieval, generation, and LangGraph workflow."
+requires-python = ">=3.13"
+dependencies = [
+    "apscheduler>=3.11.1",
+    "asyncpg>=0.31.0",
+    "docling>=2.61.0",
+    "fastapi>=0.125.0",
+    "huggingface-hub>=1.16.1",
+    "langfuse>=3.9.0",
+    "langgraph>=1.2.2",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.12.0",
+    "pymupdf>=1.26.7",
+    "pypdf>=6.4.0",
+    "python-dotenv>=1.2.2",
+    "redis>=7.1.0",
+    "requests>=2.32.5",
+    "sentence-transformers>=5.2.0",
+    "torch>=2.12.0",
+    "uvicorn>=0.38.0",
+]
+
+[project.scripts]
+ragarena-ingest = "ragarena.cli.ingest:main"
+ragarena-arxiv-fetch = "ragarena.cli.arxiv_fetch:main"
+ragarena-paper-download = "ragarena.cli.paper_download:main"
+ragarena-paper-parse = "ragarena.cli.paper_parse:main"
+ragarena-rebuild-paper = "ragarena.cli.rebuild_paper:main"
+ragarena-paper-batch = "ragarena.cli.paper_batch:main"
+ragarena-download-random-papers = "ragarena.cli.download_random_papers:main"
+ragarena-prepare-ablation-corpus = "ragarena.cli.prepare_ablation_corpus:main"
+ragarena-pipeline = "ragarena.cli.pipeline:main"
+ragarena-chunk = "ragarena.cli.chunk:main"
+ragarena-embed = "ragarena.cli.embed:main"
+ragarena-index = "ragarena.cli.index_embeddings:main"
+ragarena-search = "ragarena.cli.search:main"
+ragarena-ask = "ragarena.cli.ask:main"
+ragarena-agent-test = "ragarena.cli.agent_test:main"
+ragarena-eval = "ragarena.cli.evaluate:main"
+ragarena-generate-eval-qa = "ragarena.cli.generate_eval_qa:main"
+ragarena-reset-data = "ragarena.cli.reset_data:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.0",
+    "pytest>=9.0.3",
+    "ruff>=0.14.8",
+]
+
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu130", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008", "E402", "E501", "I001", "UP035", "UP037"]
+
+[tool.mypy]
+python_version = "3.13"
+packages = ["ragarena", "app"]
+ignore_missing_imports = true
+warn_unused_ignores = false
+disallow_untyped_defs = false
+check_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

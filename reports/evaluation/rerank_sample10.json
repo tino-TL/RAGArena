@@ -1,0 +1,2149 @@
+{
+  "dataset": "data\\eval\\qa_ablation_rerank_sample10.json",
+  "plan": "data\\eval\\rerank_sample10_plan.json",
+  "case_count": 10,
+  "top_k": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "variants": [
+    {
+      "variant": {
+        "name": "D_rerank_sample10::hybrid_agentic",
+        "strategy": "hybrid",
+        "chunking_strategy": "agentic",
+        "index_name": null,
+        "generate": false,
+        "include_categories": [],
+        "include_tags": [
+          "ablation_10paper"
+        ]
+      },
+      "case_count": 10,
+      "cases": [
+        {
+          "qa_id": "ablation-2606.02463v1-03",
+          "query": "What information is discussed in 3.2. Oracle Data Collection and Neural Router Training?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.7039180890341347,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.639945385422766,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.4772656487866462,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 7590.011,
+          "retrieved_chunk_ids": [
+            374,
+            389,
+            377,
+            381,
+            376,
+            394,
+            388,
+            392,
+            393,
+            382
+          ],
+          "retrieved_document_ids": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "retrieved_sections": [
+            "3. Methodology",
+            "5. Future Work",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "4.2. Router Training Results",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "4.2. Router Training Results",
+            "4.4. Discussion and Limitations",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "4.2. Router Training Results"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "table",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "fused",
+            "fused",
+            "table"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2604.16511v1-07",
+          "query": "What information is discussed in 8.2 Evaluation I: Synthetic Benchmark?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 0.5,
+              "ndcg": 0.2960819109658652,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.375,
+              "mrr": 0.5,
+              "ndcg": 0.4912596920895758,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.375,
+              "mrr": 0.5,
+              "ndcg": 0.3663771643778127,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 132.878,
+          "retrieved_chunk_ids": [
+            776,
+            767,
+            773,
+            768,
+            765,
+            786,
+            751,
+            775,
+            770,
+            771
+          ],
+          "retrieved_document_ids": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "retrieved_sections": [
+            "8.6 Limitations",
+            "8.2 Evaluation I: Synthetic Benchmark",
+            "8.5 Cross-Benchmark Analysis",
+            "8.2 Evaluation I: Synthetic Benchmark",
+            "8 Empirical Evaluation",
+            "8.5 Cross-Benchmark Analysis",
+            "1 Introduction",
+            "8.5 Cross-Benchmark Analysis",
+            "8.3 Evaluation II: BIRD Benchmark",
+            "8.3 Evaluation II: BIRD Benchmark"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "table",
+            "body",
+            "table",
+            "body",
+            "fused",
+            "figure_caption",
+            "figure_caption",
+            "table",
+            "table"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.26885v1-06",
+          "query": "What information is discussed in B. Fixed-Time Convergence for Distributed Estimation?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.5,
+              "mrr": 1.0,
+              "ndcg": 0.8687949224876582,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.75,
+              "mrr": 1.0,
+              "ndcg": 0.8053706965939337,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 62.966,
+          "retrieved_chunk_ids": [
+            456,
+            463,
+            459,
+            464,
+            460,
+            440,
+            457,
+            450,
+            447,
+            458
+          ],
+          "retrieved_document_ids": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "retrieved_sections": [
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "VI. CONCLUSION",
+            "unknown",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "C. Fixed-time convergence of Convex optimization problem",
+            "B. Robust Fixed-Time Reachability Under Matched Disturbances",
+            "B. Fixed-Time Convergence for Distributed Estimation"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "figure_caption",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "figure_caption"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.29030v1-01",
+          "query": "What information is discussed in 5 Widely dispersed relocations?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "3": {
+              "recall": 0.14285714285714285,
+              "mrr": 0.3333333333333333,
+              "ndcg": 0.23463936301137822,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.2857142857142857,
+              "mrr": 0.3333333333333333,
+              "ndcg": 0.30078518014914984,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.7142857142857143,
+              "mrr": 0.3333333333333333,
+              "ndcg": 0.5038908735754306,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 58.776,
+          "retrieved_chunk_ids": [
+            863,
+            861,
+            875,
+            868,
+            879,
+            882,
+            862,
+            872,
+            878,
+            880
+          ],
+          "retrieved_document_ids": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "retrieved_sections": [
+            "1 Introduction",
+            "Abstract",
+            "5 Widely dispersed relocations",
+            "3 Persistence bounds for killed chains with relocations",
+            "5 Widely dispersed relocations",
+            "5 Widely dispersed relocations",
+            "1 Introduction",
+            "4.1 Relocations enhance persistence",
+            "5 Widely dispersed relocations",
+            "5 Widely dispersed relocations"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "body",
+            "figure_caption",
+            "figure_caption"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2606.02463v1-06",
+          "query": "What result is reported in 4.2. Router Training Results?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.46927872602275644,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.6164336326286644,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.4597307900205735,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 56.677,
+          "retrieved_chunk_ids": [
+            381,
+            394,
+            389,
+            377,
+            382,
+            374,
+            393,
+            378,
+            379,
+            388
+          ],
+          "retrieved_document_ids": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "retrieved_sections": [
+            "4.2. Router Training Results",
+            "4.2. Router Training Results",
+            "5. Future Work",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "4.2. Router Training Results",
+            "3. Methodology",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3.3. Confidence-Based Cascade",
+            "4.4. Discussion and Limitations"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "body",
+            "table",
+            "table",
+            "body",
+            "fused",
+            "table",
+            "body",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.29030v1-06",
+          "query": "What information is discussed in 1 Introduction?",
+          "category": "method",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.7653606369886217,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.6992148198508501,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.75,
+              "mrr": 1.0,
+              "ndcg": 0.7756770539810109,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 80.312,
+          "retrieved_chunk_ids": [
+            862,
+            872,
+            871,
+            863,
+            881,
+            873,
+            874,
+            861,
+            878,
+            880
+          ],
+          "retrieved_document_ids": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "retrieved_sections": [
+            "1 Introduction",
+            "4.1 Relocations enhance persistence",
+            "4 Two consequences of the Perron-Frobenius theorem",
+            "1 Introduction",
+            "References",
+            "4.2 Large deviation lower bound for empirical measures",
+            "4.2 Large deviation lower bound for empirical measures",
+            "Abstract",
+            "5 Widely dispersed relocations",
+            "5 Widely dispersed relocations"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "figure_caption",
+            "figure_caption"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2606.02536v1-05",
+          "query": "What is the main contribution of the paper?",
+          "category": "method",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "3": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "5": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "10": {
+              "recall": 0.3333333333333333,
+              "mrr": 0.125,
+              "ndcg": 0.18293214719087555,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 59.122,
+          "retrieved_chunk_ids": [
+            48,
+            38,
+            51,
+            41,
+            47,
+            44,
+            42,
+            34,
+            39,
+            49
+          ],
+          "retrieved_document_ids": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retrieved_sections": [
+            "Impact Statement",
+            "3.1. Trait Vectors",
+            "3.4. Results",
+            "3.4. Results",
+            "5. Limitations and Future Work",
+            "4. Agent-to-Agent Protocol",
+            "3.4. Results",
+            "Abstract",
+            "3.2. Model Validation",
+            "References"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "fused",
+            "body",
+            "body",
+            "figure_caption",
+            "figure_caption",
+            "body",
+            "body",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.23108v1-09",
+          "query": "What result is reported in C. Results?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.46927872602275644,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.3391602052736161,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.2529427027676571,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 62.788,
+          "retrieved_chunk_ids": [
+            142,
+            174,
+            165,
+            155,
+            136,
+            170,
+            171,
+            143,
+            172,
+            144
+          ],
+          "retrieved_document_ids": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "retrieved_sections": [
+            "C. Results",
+            "C. Results",
+            "C. Construct Validity",
+            "B. Results",
+            "Cynic → Skeptic → Ny¯ aya → Confucian",
+            "B. Generic Baseline Prompt",
+            "REFERENCES",
+            "C. Results",
+            "C. The 10 Dispositions",
+            "C. Results"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "table",
+            "fused",
+            "figure_caption"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.27985v1-01",
+          "query": "What information is discussed in 5.2 Online Linearized Optimal Power Flow?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.46927872602275644,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.4703652827859579,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.5,
+              "mrr": 1.0,
+              "ndcg": 0.5037056744091757,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 58.638,
+          "retrieved_chunk_ids": [
+            244,
+            251,
+            230,
+            249,
+            231,
+            240,
+            236,
+            245,
+            238,
+            248
+          ],
+          "retrieved_document_ids": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "retrieved_sections": [
+            "5.2 Online Linearized Optimal Power Flow",
+            "5.2 Online Linearized Optimal Power Flow",
+            "Abstract",
+            "6 Conclusion",
+            "1 Introduction",
+            "4.3 Time-varying Linear Equality-Constrained OCO",
+            "4 Algorithms",
+            "5.2 Online Linearized Optimal Power Flow",
+            "4.1 Online Root-finding",
+            "5.2 Online Linearized Optimal Power Flow"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "figure_caption",
+            "body",
+            "figure_caption"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.27985v1-08",
+          "query": "What information is discussed in 1 Introduction?",
+          "category": "method",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.7653606369886217,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.5531464700081437,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.4125317798925535,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 54.774,
+          "retrieved_chunk_ids": [
+            231,
+            230,
+            236,
+            245,
+            247,
+            233,
+            249,
+            232,
+            244,
+            246
+          ],
+          "retrieved_document_ids": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "retrieved_sections": [
+            "1 Introduction",
+            "Abstract",
+            "4 Algorithms",
+            "5.2 Online Linearized Optimal Power Flow",
+            "5.2 Online Linearized Optimal Power Flow",
+            "2.1 Definitions",
+            "6 Conclusion",
+            "2 Background",
+            "5.2 Online Linearized Optimal Power Flow",
+            "5.2 Online Linearized Optimal Power Flow"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "figure_caption",
+            "figure_caption",
+            "body",
+            "body",
+            "body",
+            "body",
+            "figure_caption"
+          ],
+          "answer": null,
+          "error": null
+        }
+      ],
+      "summary": {
+        "ok_cases": 10,
+        "error_cases": 0,
+        "latency_ms_avg": 821.6942,
+        "latency_ms_p50": 59.122,
+        "latency_ms_p95": 7590.011,
+        "citation_source_hit_rate": 1.0,
+        "section_hit_rate": 1.0,
+        "keyword_hit_rate": 1.0,
+        "page_hit_rate": 0.0,
+        "visual_ref_hit_rate": 0.0,
+        "deterministic_answer_accuracy": 0.0,
+        "judge_answer_accuracy": null,
+        "judge_citation_accuracy": null,
+        "unsupported_claim_rate": null,
+        "recall@1": 0.0875,
+        "mrr@1": 0.7,
+        "ndcg@1": 0.7,
+        "hit_rate@1": 0.7,
+        "recall@3": 0.1768,
+        "mrr@3": 0.7833,
+        "ndcg@3": 0.5173,
+        "hit_rate@3": 0.9,
+        "recall@5": 0.2911,
+        "mrr@5": 0.7833,
+        "ndcg@5": 0.4979,
+        "hit_rate@5": 0.9,
+        "recall@10": 0.4548,
+        "mrr@10": 0.7958,
+        "ndcg@10": 0.474,
+        "hit_rate@10": 1.0
+      }
+    },
+    {
+      "variant": {
+        "name": "D_rerank_sample10::hybrid_hyde_rerank_agentic",
+        "strategy": "hybrid_hyde_rerank",
+        "chunking_strategy": "agentic",
+        "index_name": null,
+        "generate": false,
+        "include_categories": [],
+        "include_tags": [
+          "ablation_10paper"
+        ]
+      },
+      "case_count": 10,
+      "cases": [
+        {
+          "qa_id": "ablation-2606.02463v1-03",
+          "query": "What information is discussed in 3.2. Oracle Data Collection and Neural Router Training?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.46927872602275644,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.3391602052736161,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.5,
+              "mrr": 1.0,
+              "ndcg": 0.4923028905813183,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 32062.291,
+          "retrieved_chunk_ids": [
+            374,
+            381,
+            394,
+            392,
+            389,
+            376,
+            393,
+            388,
+            377,
+            373
+          ],
+          "retrieved_document_ids": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "retrieved_sections": [
+            "3. Methodology",
+            "4.2. Router Training Results",
+            "4.2. Router Training Results",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "5. Future Work",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "4.4. Discussion and Limitations",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "2. Related Work"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "fused",
+            "fused",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "table",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2604.16511v1-07",
+          "query": "What information is discussed in 8.2 Evaluation I: Synthetic Benchmark?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.7653606369886217,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.5531464700081437,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.625,
+              "mrr": 1.0,
+              "ndcg": 0.6415864976162952,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 27530.705,
+          "retrieved_chunk_ids": [
+            766,
+            765,
+            773,
+            786,
+            776,
+            751,
+            779,
+            767,
+            768,
+            769
+          ],
+          "retrieved_document_ids": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "retrieved_sections": [
+            "8.2 Evaluation I: Synthetic Benchmark",
+            "8 Empirical Evaluation",
+            "8.5 Cross-Benchmark Analysis",
+            "8.5 Cross-Benchmark Analysis",
+            "8.6 Limitations",
+            "1 Introduction",
+            "11 Conclusion",
+            "8.2 Evaluation I: Synthetic Benchmark",
+            "8.2 Evaluation I: Synthetic Benchmark",
+            "8.3 Evaluation II: BIRD Benchmark"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "figure_caption",
+            "body",
+            "table",
+            "table",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.26885v1-06",
+          "query": "What information is discussed in B. Fixed-Time Convergence for Distributed Estimation?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.5,
+              "mrr": 1.0,
+              "ndcg": 0.8539316501572937,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.75,
+              "mrr": 1.0,
+              "ndcg": 0.8067492731263584,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 31188.512,
+          "retrieved_chunk_ids": [
+            456,
+            463,
+            459,
+            460,
+            464,
+            457,
+            451,
+            458,
+            449,
+            440
+          ],
+          "retrieved_document_ids": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "retrieved_sections": [
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "VI. CONCLUSION",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "C. Fixed-time convergence of Convex optimization problem",
+            "B. Fixed-Time Convergence for Distributed Estimation",
+            "B. Robust Fixed-Time Reachability Under Matched Disturbances",
+            "unknown"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "figure_caption",
+            "body",
+            "fused",
+            "body",
+            "body",
+            "figure_caption",
+            "figure_caption",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.29030v1-01",
+          "query": "What information is discussed in 5 Widely dispersed relocations?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.14285714285714285,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.42857142857142855,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.42857142857142855,
+              "mrr": 1.0,
+              "ndcg": 0.7227265726449519,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.5714285714285714,
+              "mrr": 1.0,
+              "ndcg": 0.6836550817096436,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 29204.053,
+          "retrieved_chunk_ids": [
+            875,
+            882,
+            879,
+            863,
+            861,
+            877,
+            872,
+            873,
+            862,
+            868
+          ],
+          "retrieved_document_ids": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "retrieved_sections": [
+            "5 Widely dispersed relocations",
+            "5 Widely dispersed relocations",
+            "5 Widely dispersed relocations",
+            "1 Introduction",
+            "Abstract",
+            "5 Widely dispersed relocations",
+            "4.1 Relocations enhance persistence",
+            "4.2 Large deviation lower bound for empirical measures",
+            "1 Introduction",
+            "3 Persistence bounds for killed chains with relocations"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2606.02463v1-06",
+          "query": "What result is reported in 4.2. Router Training Results?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.46927872602275644,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.3391602052736161,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.32908604348504067,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 26228.362,
+          "retrieved_chunk_ids": [
+            381,
+            394,
+            389,
+            393,
+            374,
+            376,
+            388,
+            392,
+            377,
+            378
+          ],
+          "retrieved_document_ids": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "retrieved_sections": [
+            "4.2. Router Training Results",
+            "4.2. Router Training Results",
+            "5. Future Work",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3. Methodology",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "4.4. Discussion and Limitations",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3.2. Oracle Data Collection and Neural Router Training",
+            "3.2. Oracle Data Collection and Neural Router Training"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "fused",
+            "table",
+            "table"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.29030v1-06",
+          "query": "What information is discussed in 1 Introduction?",
+          "category": "method",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.5,
+              "mrr": 1.0,
+              "ndcg": 0.8539316501572937,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.75,
+              "mrr": 1.0,
+              "ndcg": 0.8067492731263584,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 27991.271,
+          "retrieved_chunk_ids": [
+            862,
+            868,
+            861,
+            864,
+            873,
+            863,
+            870,
+            872,
+            871,
+            877
+          ],
+          "retrieved_document_ids": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "retrieved_sections": [
+            "1 Introduction",
+            "3 Persistence bounds for killed chains with relocations",
+            "Abstract",
+            "2.1 Ergodicity of chains with complete connections",
+            "4.2 Large deviation lower bound for empirical measures",
+            "1 Introduction",
+            "3 Persistence bounds for killed chains with relocations",
+            "4.1 Relocations enhance persistence",
+            "4 Two consequences of the Perron-Frobenius theorem",
+            "5 Widely dispersed relocations"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2606.02536v1-05",
+          "query": "What is the main contribution of the paper?",
+          "category": "method",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "3": {
+              "recall": 0.3333333333333333,
+              "mrr": 0.5,
+              "ndcg": 0.5307212739772434,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.6666666666666666,
+              "mrr": 0.5,
+              "ndcg": 0.6608397947263839,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 1.0,
+              "mrr": 0.5,
+              "ndcg": 0.7761612682896011,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 26303.266,
+          "retrieved_chunk_ids": [
+            48,
+            34,
+            36,
+            35,
+            49,
+            47,
+            40,
+            52,
+            43,
+            46
+          ],
+          "retrieved_document_ids": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retrieved_sections": [
+            "Impact Statement",
+            "Abstract",
+            "2. Background and Related Work",
+            "1. Introduction",
+            "References",
+            "5. Limitations and Future Work",
+            "3.3. Implementation",
+            "4. Agent-to-Agent Protocol",
+            "4. Agent-to-Agent Protocol",
+            "4.2. Deployment"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.23108v1-09",
+          "query": "What result is reported in C. Results?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0,
+              "hit_rate": 0.0
+            },
+            "3": {
+              "recall": 0.25,
+              "mrr": 0.5,
+              "ndcg": 0.5307212739772434,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.25,
+              "mrr": 0.5,
+              "ndcg": 0.38356636737133565,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.25,
+              "mrr": 0.5,
+              "ndcg": 0.28606042850872493,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 20629.148,
+          "retrieved_chunk_ids": [
+            174,
+            142,
+            128,
+            177,
+            165,
+            159,
+            155,
+            172,
+            143,
+            136
+          ],
+          "retrieved_document_ids": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "retrieved_sections": [
+            "C. Results",
+            "C. Results",
+            "C. Multi-Agent Frameworks",
+            "B. Results",
+            "C. Construct Validity",
+            "A. What Works",
+            "B. Results",
+            "C. The 10 Dispositions",
+            "C. Results",
+            "Cynic → Skeptic → Ny¯ aya → Confucian"
+          ],
+          "retrieved_chunk_types": [
+            "fused",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "fused",
+            "table",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.27985v1-01",
+          "query": "What information is discussed in 5.2 Online Linearized Optimal Power Flow?",
+          "category": "figure_table",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 0.46927872602275644,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.6164336326286644,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.375,
+              "mrr": 1.0,
+              "ndcg": 0.4597307900205735,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 31090.44,
+          "retrieved_chunk_ids": [
+            244,
+            251,
+            249,
+            231,
+            243,
+            250,
+            242,
+            240,
+            239,
+            235
+          ],
+          "retrieved_document_ids": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "retrieved_sections": [
+            "5.2 Online Linearized Optimal Power Flow",
+            "5.2 Online Linearized Optimal Power Flow",
+            "6 Conclusion",
+            "1 Introduction",
+            "5.1 Target tracking",
+            "5.1 Target tracking",
+            "5 Numerical Examples",
+            "4.3 Time-varying Linear Equality-Constrained OCO",
+            "4.2 Online Convex Optimization with OSNR",
+            "3 Online Sketched Newton-Raphson"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "fused",
+            "body",
+            "body",
+            "body",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        },
+        {
+          "qa_id": "ablation-2605.27985v1-08",
+          "query": "What information is discussed in 1 Introduction?",
+          "category": "method",
+          "tags": [
+            "ablation_10paper"
+          ],
+          "status": "ok",
+          "retrieval_metrics": {
+            "1": {
+              "recall": 0.125,
+              "mrr": 1.0,
+              "ndcg": 1.0,
+              "hit_rate": 1.0
+            },
+            "3": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.7039180890341347,
+              "hit_rate": 1.0
+            },
+            "5": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.5087403079104241,
+              "hit_rate": 1.0
+            },
+            "10": {
+              "recall": 0.25,
+              "mrr": 1.0,
+              "ndcg": 0.3794140541514857,
+              "hit_rate": 1.0
+            }
+          },
+          "source_metrics": {
+            "chunk_hit": true,
+            "document_hit": true,
+            "section_hit": true,
+            "keyword_hit": true,
+            "page_hit": false,
+            "visual_ref_hit": false,
+            "citation_source_hit": true
+          },
+          "answer_metrics": {
+            "deterministic_answer_correct": false,
+            "judge_answer_correct": null,
+            "judge_citation_correct": null,
+            "unsupported_claim": null,
+            "judge_score": null
+          },
+          "latency_ms": 29457.053,
+          "retrieved_chunk_ids": [
+            231,
+            232,
+            230,
+            235,
+            236,
+            249,
+            234,
+            244,
+            251,
+            233
+          ],
+          "retrieved_document_ids": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "retrieved_sections": [
+            "1 Introduction",
+            "2 Background",
+            "Abstract",
+            "3 Online Sketched Newton-Raphson",
+            "4 Algorithms",
+            "6 Conclusion",
+            "2.2 Assumptions",
+            "5.2 Online Linearized Optimal Power Flow",
+            "5.2 Online Linearized Optimal Power Flow",
+            "2.1 Definitions"
+          ],
+          "retrieved_chunk_types": [
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "body",
+            "fused",
+            "body"
+          ],
+          "answer": null,
+          "error": null
+        }
+      ],
+      "summary": {
+        "ok_cases": 10,
+        "error_cases": 0,
+        "latency_ms_avg": 28168.5101,
+        "latency_ms_p50": 27991.271,
+        "latency_ms_p95": 32062.291,
+        "citation_source_hit_rate": 1.0,
+        "section_hit_rate": 1.0,
+        "keyword_hit_rate": 1.0,
+        "page_hit_rate": 0.0,
+        "visual_ref_hit_rate": 0.0,
+        "deterministic_answer_accuracy": 0.0,
+        "judge_answer_accuracy": null,
+        "judge_citation_accuracy": null,
+        "unsupported_claim_rate": null,
+        "recall@1": 0.1018,
+        "mrr@1": 0.8,
+        "ndcg@1": 0.8,
+        "hit_rate@1": 0.8,
+        "recall@3": 0.2637,
+        "mrr@3": 0.9,
+        "ndcg@3": 0.6939,
+        "hit_rate@3": 1.0,
+        "recall@5": 0.347,
+        "mrr@5": 0.9,
+        "ndcg@5": 0.5832,
+        "hit_rate@5": 1.0,
+        "recall@10": 0.5321,
+        "mrr@10": 0.9,
+        "ndcg@10": 0.5661,
+        "hit_rate@10": 1.0
+      }
+    }
+  ]
+}

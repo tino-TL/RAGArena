@@ -1,0 +1,60 @@
+{
+  "dataset": "data\\eval\\qa_ablation_100.json",
+  "experiments": [
+    {
+      "id": "A_chunk_strategy_ablation",
+      "subset_filter": {
+        "tags": [
+          "ablation_10paper"
+        ]
+      },
+      "variants": [
+        {
+          "name": "fixed_hybrid",
+          "strategy": "hybrid",
+          "chunk_strategy": "fixed"
+        },
+        {
+          "name": "agentic_hybrid",
+          "strategy": "hybrid",
+          "chunk_strategy": "agentic"
+        },
+        {
+          "name": "fixed_hybrid_hyde_rerank",
+          "strategy": "hybrid_hyde_rerank",
+          "chunk_strategy": "fixed"
+        },
+        {
+          "name": "agentic_hybrid_hyde_rerank",
+          "strategy": "hybrid_hyde_rerank",
+          "chunk_strategy": "agentic"
+        }
+      ]
+    },
+    {
+      "id": "B_visual_fused_ablation",
+      "subset_filter": {
+        "categories": [
+          "figure_table"
+        ]
+      },
+      "variants": [
+        {
+          "name": "fixed_visual_subset",
+          "strategy": "hybrid",
+          "chunk_strategy": "fixed"
+        },
+        {
+          "name": "agentic_visual_subset",
+          "strategy": "hybrid",
+          "chunk_strategy": "agentic"
+        },
+        {
+          "name": "agentic_visual_rerank",
+          "strategy": "hybrid_hyde_rerank",
+          "chunk_strategy": "agentic"
+        }
+      ]
+    }
+  ]
+}

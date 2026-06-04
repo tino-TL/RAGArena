@@ -1,0 +1,55 @@
+# Local environment
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# Python caches and build outputs
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local model/package artifacts
+wheels/
+*.whl
+models/
+
+# Runtime data
+*.log
+logs/
+tmp/
+temp/
+
+# Downloaded corpora and generated ingestion data
+data/papers/
+data/raw/
+data/processed/
+data/storage/
+
+# Keep curated evaluation datasets, but ignore bulky/debug outputs by default
+reports/evaluation/*
+!reports/evaluation/ablation_10paper_hybrid.json
+!reports/evaluation/ablation_10paper_hybrid.md
+!reports/evaluation/retrieval_stack_sample30.json
+!reports/evaluation/retrieval_stack_sample30.md
+!reports/evaluation/rerank_sample10.json
+!reports/evaluation/rerank_sample10.md
+
+# Docker bind-mounted data should stay outside git
+docker-data/

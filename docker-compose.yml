@@ -1,0 +1,61 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: ragarena-postgres
+    environment:
+      POSTGRES_USER: ragarena
+      POSTGRES_PASSWORD: ragarena
+      POSTGRES_DB: ragarena
+    ports:
+      - "5432:5432"
+    volumes:
+      - E:/docker-data/ragarena/postgres:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: ragarena-elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - E:/docker-data/ragarena/elasticsearch:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.0
+    container_name: ragarena-kibana
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ragarena-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - E:/ollama/models:/root/.ollama/models
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+
+  redis:
+    image: redis:latest
+    container_name: ragarena-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - E:/docker-data/ragarena/redis:/data

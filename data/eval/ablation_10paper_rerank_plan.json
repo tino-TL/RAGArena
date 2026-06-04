@@ -1,0 +1,25 @@
+{
+  "dataset": "data/eval/qa_ablation_100.json",
+  "experiments": [
+    {
+      "id": "A_chunk_strategy_rerank",
+      "subset_filter": {
+        "tags": [
+          "ablation_10paper"
+        ]
+      },
+      "variants": [
+        {
+          "name": "fixed_hybrid_hyde_rerank",
+          "strategy": "hybrid_hyde_rerank",
+          "chunk_strategy": "fixed"
+        },
+        {
+          "name": "agentic_hybrid_hyde_rerank",
+          "strategy": "hybrid_hyde_rerank",
+          "chunk_strategy": "agentic"
+        }
+      ]
+    }
+  ]
+}

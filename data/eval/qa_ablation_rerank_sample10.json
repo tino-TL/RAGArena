@@ -1,0 +1,479 @@
+[
+  {
+    "paper_id": 5,
+    "arxiv_id": "2606.02463v1",
+    "query": "What information is discussed in 3.2. Oracle Data Collection and Neural Router Training?",
+    "gold_sections": [
+      "3.2. Oracle Data Collection and Neural Router Training"
+    ],
+    "gold_keywords": [
+      "Router",
+      "Train",
+      "Acc",
+      "Val"
+    ],
+    "source_chunk_id": 378,
+    "id": "ablation-2606.02463v1-03",
+    "gold_chunk_ids": [
+      378
+    ],
+    "gold_document_ids": [
+      5
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        347,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355
+      ],
+      "agentic": [
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380
+      ]
+    }
+  },
+  {
+    "paper_id": 9,
+    "arxiv_id": "2604.16511v1",
+    "query": "What information is discussed in 8.2 Evaluation I: Synthetic Benchmark?",
+    "gold_sections": [
+      "8.2 Evaluation I: Synthetic Benchmark"
+    ],
+    "gold_keywords": [
+      "Table",
+      "Synthetic",
+      "Config",
+      "Easy"
+    ],
+    "source_chunk_id": 768,
+    "id": "ablation-2604.16511v1-07",
+    "gold_chunk_ids": [
+      768
+    ],
+    "gold_document_ids": [
+      9
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        668,
+        669,
+        687,
+        701,
+        703,
+        706,
+        707,
+        708
+      ],
+      "agentic": [
+        750,
+        752,
+        757,
+        765,
+        766,
+        767,
+        768,
+        769
+      ]
+    }
+  },
+  {
+    "paper_id": 6,
+    "arxiv_id": "2605.26885v1",
+    "query": "What information is discussed in B. Fixed-Time Convergence for Distributed Estimation?",
+    "gold_sections": [
+      "B. Fixed-Time Convergence for Distributed Estimation"
+    ],
+    "gold_keywords": [
+      "Fig",
+      "18",
+      "10"
+    ],
+    "source_chunk_id": 459,
+    "id": "ablation-2605.26885v1-06",
+    "gold_chunk_ids": [
+      459
+    ],
+    "gold_document_ids": [
+      6
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        423,
+        431,
+        432,
+        433,
+        434
+      ],
+      "agentic": [
+        448,
+        456,
+        457,
+        458,
+        459,
+        461,
+        463,
+        464
+      ]
+    }
+  },
+  {
+    "paper_id": 10,
+    "arxiv_id": "2605.29030v1",
+    "query": "What information is discussed in 5 Widely dispersed relocations?",
+    "gold_sections": [
+      "5 Widely dispersed relocations"
+    ],
+    "gold_keywords": [
+      "Figure",
+      "Concentration"
+    ],
+    "source_chunk_id": 878,
+    "id": "ablation-2605.29030v1-01",
+    "gold_chunk_ids": [
+      878
+    ],
+    "gold_document_ids": [
+      10
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847
+      ],
+      "agentic": [
+        875,
+        876,
+        877,
+        878,
+        879,
+        880,
+        882
+      ]
+    }
+  },
+  {
+    "paper_id": 5,
+    "arxiv_id": "2606.02463v1",
+    "query": "What result is reported in 4.2. Router Training Results?",
+    "gold_sections": [
+      "4.2. Router Training Results"
+    ],
+    "gold_keywords": [
+      "Table",
+      "VQAaccuracy",
+      "JudgeAcc",
+      "Lat"
+    ],
+    "source_chunk_id": 384,
+    "id": "ablation-2606.02463v1-06",
+    "gold_chunk_ids": [
+      384
+    ],
+    "gold_document_ids": [
+      5
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        355,
+        357,
+        358,
+        359,
+        360,
+        361,
+        363
+      ],
+      "agentic": [
+        377,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387
+      ]
+    }
+  },
+  {
+    "paper_id": 10,
+    "arxiv_id": "2605.29030v1",
+    "query": "What information is discussed in 1 Introduction?",
+    "gold_sections": [
+      "1 Introduction"
+    ],
+    "gold_keywords": [
+      "Hence",
+      "Let",
+      "Stochastic",
+      "Furthermore"
+    ],
+    "source_chunk_id": 863,
+    "id": "ablation-2605.29030v1-06",
+    "gold_chunk_ids": [
+      863
+    ],
+    "gold_document_ids": [
+      10
+    ],
+    "category": "method",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        788,
+        789,
+        790,
+        791,
+        792,
+        793,
+        794,
+        795
+      ],
+      "agentic": [
+        861,
+        862,
+        863,
+        866,
+        868,
+        872,
+        873,
+        874
+      ]
+    }
+  },
+  {
+    "paper_id": 1,
+    "arxiv_id": "2606.02536v1",
+    "query": "What is the main contribution of the paper?",
+    "gold_sections": [
+      "Abstract"
+    ],
+    "gold_keywords": [
+      "Abstract",
+      "Text",
+      "Through",
+      "Evaluated"
+    ],
+    "source_chunk_id": 34,
+    "id": "ablation-2606.02536v1-05",
+    "gold_chunk_ids": [
+      34
+    ],
+    "gold_document_ids": [
+      1
+    ],
+    "category": "method",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        1,
+        2,
+        6,
+        20,
+        30,
+        31
+      ],
+      "agentic": [
+        34,
+        35,
+        36,
+        43,
+        49,
+        52
+      ]
+    }
+  },
+  {
+    "paper_id": 2,
+    "arxiv_id": "2605.23108v1",
+    "query": "What result is reported in C. Results?",
+    "gold_sections": [
+      "C. Results"
+    ],
+    "gold_keywords": [
+      "Fig",
+      "Review",
+      "Dispositions",
+      "MORE"
+    ],
+    "source_chunk_id": 150,
+    "id": "ablation-2605.23108v1-09",
+    "gold_chunk_ids": [
+      150
+    ],
+    "gold_document_ids": [
+      2
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        53,
+        60,
+        63,
+        64,
+        68,
+        70,
+        71,
+        74
+      ],
+      "agentic": [
+        122,
+        125,
+        128,
+        132,
+        135,
+        137,
+        139,
+        142
+      ]
+    }
+  },
+  {
+    "paper_id": 3,
+    "arxiv_id": "2605.27985v1",
+    "query": "What information is discussed in 5.2 Online Linearized Optimal Power Flow?",
+    "gold_sections": [
+      "5.2 Online Linearized Optimal Power Flow"
+    ],
+    "gold_keywords": [
+      "Fig",
+      "Average",
+      "OSNR"
+    ],
+    "source_chunk_id": 245,
+    "id": "ablation-2605.27985v1-01",
+    "gold_chunk_ids": [
+      245
+    ],
+    "gold_document_ids": [
+      3
+    ],
+    "category": "figure_table",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        212,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221
+      ],
+      "agentic": [
+        231,
+        241,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248
+      ]
+    }
+  },
+  {
+    "paper_id": 3,
+    "arxiv_id": "2605.27985v1",
+    "query": "What information is discussed in 1 Introduction?",
+    "gold_sections": [
+      "1 Introduction"
+    ],
+    "gold_keywords": [
+      "Introduction",
+      "Online",
+      "OCO",
+      "23"
+    ],
+    "source_chunk_id": 231,
+    "id": "ablation-2605.27985v1-08",
+    "gold_chunk_ids": [
+      231
+    ],
+    "gold_document_ids": [
+      3
+    ],
+    "category": "method",
+    "tags": [
+      "ablation_10paper"
+    ],
+    "notes": "Generated from agentic/fused chunks for fixed-vs-agentic and visual/fused ablation.",
+    "gold_chunk_ids_by_strategy": {
+      "fixed": [
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186
+      ],
+      "agentic": [
+        230,
+        231,
+        237,
+        238,
+        239,
+        240,
+        241,
+        243
+      ]
+    }
+  }
+]

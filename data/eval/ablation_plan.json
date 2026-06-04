@@ -1,0 +1,78 @@
+{
+  "dataset": "data/eval/qa_gold.json",
+  "retrieval_dataset": "data/eval/retrieval.jsonl",
+  "reports_dir": "reports/evaluation",
+  "models": {
+    "agent_decision": "qwen3.5:4b",
+    "agentic_chunk": "qwen3.5:4b",
+    "embedding": "Qwen/Qwen3-Embedding-4B",
+    "embedding_dimensions": 2560,
+    "reranker": "BAAI/bge-reranker-v2-m3"
+  },
+  "experiments": [
+    {
+      "id": "A_visual_fused_enhancement",
+      "claim": "Visual and fused chunks improve figure/table recall and answer correctness.",
+      "subset_filter": {
+        "categories": ["figure_table", "numeric_table"]
+      },
+      "variants": [
+        {
+          "name": "baseline_body_only",
+          "strategy": "hybrid_hyde_rerank",
+          "index_name": "ragarena_body_only_chunks",
+          "visual_chunks": false,
+          "fused_chunks": false
+        },
+        {
+          "name": "visual_fused_enabled",
+          "strategy": "hybrid_hyde_rerank",
+          "index_name": "ragarena_chunks",
+          "visual_chunks": true,
+          "fused_chunks": true
+        }
+      ],
+      "metrics": ["recall@5", "recall@10", "answer_correctness", "citation_hit_rate"]
+    },
+    {
+      "id": "B_agentic_chunk_vs_fixed",
+      "claim": "Agentic chunking reduces semantic fragmentation compared with fixed-length chunks.",
+      "variants": [
+        {"name": "fixed_chunk", "strategy": "hybrid_hyde_rerank", "chunk_strategy": "fixed"},
+        {"name": "agentic_chunk", "strategy": "hybrid_hyde_rerank", "chunk_strategy": "agentic"}
+      ],
+      "metrics": ["recall@5", "recall@10", "answer_correctness"]
+    },
+    {
+      "id": "C_local_4b_decision_pipeline",
+      "claim": "Local Qwen3.5-4B keeps quality stable while lowering decision latency and main-LLM token usage.",
+      "variants": [
+        {
+          "name": "main_llm_decisions",
+          "strategy": "hybrid_hyde_rerank",
+          "decision_model": "main_llm",
+          "generate": true
+        },
+        {
+          "name": "local_qwen35_4b_decisions",
+          "strategy": "hybrid_hyde_rerank",
+          "decision_model": "qwen3.5:4b",
+          "generate": true
+        }
+      ],
+      "metrics": ["answer_correctness", "p50_latency_ms", "p95_latency_ms", "main_llm_tokens"]
+    },
+    {
+      "id": "D_retrieval_stack",
+      "claim": "BM25 + dense + HyDE + RRF + rerank improves recall progressively.",
+      "variants": [
+        {"name": "bm25", "strategy": "bm25"},
+        {"name": "dense", "strategy": "dense"},
+        {"name": "hybrid", "strategy": "hybrid"},
+        {"name": "hybrid_hyde", "strategy": "hybrid_hyde"},
+        {"name": "hybrid_hyde_rerank", "strategy": "hybrid_hyde_rerank"}
+      ],
+      "metrics": ["recall@1", "recall@3", "recall@5", "recall@10", "mrr@10", "ndcg@10", "latency_ms_p95"]
+    }
+  ]
+}

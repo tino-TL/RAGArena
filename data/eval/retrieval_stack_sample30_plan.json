@@ -1,0 +1,35 @@
+{
+  "dataset": "data/eval/qa_ablation_sample30.json",
+  "experiments": [
+    {
+      "id": "C_retrieval_stack_sample30",
+      "subset_filter": {
+        "tags": [
+          "ablation_10paper"
+        ]
+      },
+      "variants": [
+        {
+          "name": "bm25_agentic",
+          "strategy": "bm25",
+          "chunk_strategy": "agentic"
+        },
+        {
+          "name": "dense_agentic",
+          "strategy": "dense",
+          "chunk_strategy": "agentic"
+        },
+        {
+          "name": "hybrid_agentic",
+          "strategy": "hybrid",
+          "chunk_strategy": "agentic"
+        },
+        {
+          "name": "hybrid_hyde_agentic",
+          "strategy": "hybrid_hyde",
+          "chunk_strategy": "agentic"
+        }
+      ]
+    }
+  ]
+}
